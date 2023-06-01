@@ -1,0 +1,27 @@
+High Performance Computing
+--------------------------
+
+For login to cluster(Param SHAVAK)
+
+# ssh user14@192.168.82.160
+	press enter
+	then put the captcha
+	then enter password :- user14@@123
+
+# sinfo 
+	To check about of the cluster
+
+# nvidia-smi
+	To check graphic's information
+
+# lscpu
+	To check CPU full information
+
+# top -u<username>
+	Process and Thread information
+
+# . /home/apps/spack/share/spack/setup-env.sh
+	To load gcc for newest version
+
+# spack load gcc@11.2.0
+	To use gcc features
