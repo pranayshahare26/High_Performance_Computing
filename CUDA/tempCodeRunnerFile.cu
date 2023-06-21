@@ -1,0 +1,1 @@
+tid = blockIdx.x * blockDim.x + threadIdx.x;

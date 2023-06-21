@@ -25,3 +25,79 @@ For login to cluster(Param SHAVAK)
 
 # spack load gcc@11.2.0
 	To use gcc features
+
+# ml nvhpc/21.9
+	For loading all content in OpenACC & OpenCL
+
+**********
+* OpenMP *
+**********
+
+# gcc hello.c -o hello -fopenmp
+# gcc -fopenmp hello.c && ./a.out
+# gcc -Wall -g -o hello hello.c -fopenmp
+	Compile run and execute the file.
+	-Wall is showing warning
+	-g is debug the program
+
+# export OMP_NUM_THREADS=4
+	Command line threads allocation
+
+# unset OMP_NUM_THREADS
+	Unsetting the threads5
+
+# ulimit -s unlimited
+	For core dumped program
+
+# time ./a.out
+	Give a program execution time
+
+*******
+* MPI *
+*******
+
+# mpicc hello.c && mpirun -np 2 ./a.out
+	For program compile and execute
+
+# mpicc hello.c && mpirun -n 2 ./a.out
+	Other way to run and execute
+
+************
+* PThreads *
+************
+
+# gcc -g -Wall -o pth_hello.c -lpthread
+	For compiling
+
+# ./pth_hello
+	For executing and give output
+
+
+
+********
+* CUDA *
+********
+
+# spack load cuda@11.5.0 /oxw5blb
+	For cuda load to run the program in shavak
+
+# nvcc hello.c && ./a.out
+	For execute and give output
+
+
+**********
+* OpenCL *
+**********
+
+# 
+
+
+***********
+* OpenACC *
+***********
+
+# pgcc -Minfo=accel -ta=tesla:managed menu.c && ./a.out
+	Program compiling and give output
+
+@ pgcc -Minfo=accel -ta=tesla menu.c && ./a/out
+	Another way to run and execute
