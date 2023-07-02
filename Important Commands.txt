@@ -89,7 +89,11 @@ For login to cluster(Param SHAVAK)
 * OpenCL *
 **********
 
-# 
+# gcc main.c -lOpenCL -I/home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/cuda-11.5.0-oxw5blb45zjhec53he4qhtifte3a5xhu/include/ -L/home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/cuda-11.5.0-oxw5blb45zjhec53he4qhtifte3a5xhu/lib64/
+	For compile
+
+# ./a.out
+	For execute 
 
 
 ***********
@@ -99,5 +103,13 @@ For login to cluster(Param SHAVAK)
 # pgcc -Minfo=accel -ta=tesla:managed menu.c && ./a.out
 	Program compiling and give output
 
-@ pgcc -Minfo=accel -ta=tesla menu.c && ./a/out
+# pgcc -Minfo=accel -ta=tesla menu.c && ./a/out
 	Another way to run and execute
+
+
+********
+* SYCL *
+********
+
+# icpx -fsycl a.cpp ./a.out
+	Compile and execute the program
