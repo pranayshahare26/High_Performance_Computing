@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define VECTORSIZE 10
+#define VECTORSIZE 10000000
 
 int main(int argc, char **argv)
 {
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	}
 	
 	//print the data
-	printf("\nInitial data: \n");
+	/*printf("\nInitial data: \n");
 	printf("\n A matrix:\n");
 	for(i=0;i<VECTORSIZE;i++)
 	{
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 			printf("\t%d ", B[i*VECTORSIZE+j]);	
 		}
 		printf("\n");
-	}	
+	}*/	
 		
 	for(i=0;i<VECTORSIZE;i++)
 	{
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 	}
 		
 	//print the data
-	printf("\n C matrix:\n");
+	// printf("\n C matrix:\n");
 	for(i=0;i<VECTORSIZE;i++)
 	{
 		for(j=0;j<VECTORSIZE;j++)

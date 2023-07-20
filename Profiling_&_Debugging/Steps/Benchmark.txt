@@ -1,0 +1,117 @@
+==========
+= Likwid =
+==========
+
+load the spack
+
+# mkdir Benchmark
+
+# cd Benchmark/
+
+# source /home/hpcap/PROFILING/Hpctoolkit/spack/share/spack/setup-env.sh
+
+# which spack
+
+# spack spec likwid
+
+# spack install likwid %gcc@11.3.0
+
+# spack load likwid
+
+# likwid -iopology
+
+# likwid-perfctr -C 2 -g CLOCK ./a.out
+
+# source /opt/intel/oneapi/setvars.sh 
+
+# icx -DINTEL mkl1_mat_mul.c -qmkl
+
+# likwid-perfctr -g CLOCK ./a.out
+
+# likwid-bench -t copy -w S0:100MB:1-0:S0,1:S0
+
+
+=======
+= HPL =
+=======
+
+Download
+
+# wget "https://netlib.org/benchmark/hpl/"
+
+# tar -xvf hpl-2.3.tar.gz 
+
+# cd hpl-2.3/
+
+# cp setup/Make.Linux_Intel64 .
+
+# pwd
+	Copy the current path 
+
+# vi Make.Linux_Intel64 
+	Line no. 70
+		TOPdir       = $(HOME)/PROFILING/Benchmark/hpl-2.3
+
+	Line no. 180 
+		OMP_DEFS = -qopenmp
+		
+# make arch=Linux_Intel64
+
+Go hpl directory then go bin
+check for hpl file
+
+# nano HPL.dat
+	Changes below
+		  1 HPLinpack benchmark input file
+  2 Innovative Computing Laboratory, University of Tennessee
+  3 HPL.out      output file name (if any)
+  4 6            device out (6=stdout,7=stderr,file)
+  5 1            # of problems sizes (N)
+  6 74145 30 34 35  Ns
+  7 4            # of NBs
+  8 192 2 3 4     NBs
+  9 0            PMAP process mapping (0=Row-,1=Column-major)
+ 10 1            # of process grids (P x Q)
+ 11 4 2 1 4        Ps
+ 12 4 2 4 1        Qs
+ 13 16.0         threshold
+ 14 3            # of panel fact
+ 15 0 1 2        PFACTs (0=left, 1=Crout, 2=Right)
+ 16 2            # of recursive stopping criterium
+ 17 2 4          NBMINs (>= 1)
+ 18 1            # of panels in recursion
+ 19 2            NDIVs
+ 20 3            # of recursive panel fact.
+ 21 0 1 2        RFACTs (0=left, 1=Crout, 2=Right)
+ 22 1            # of broadcast
+ 23 0            BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)
+ 24 1            # of lookahead depth
+ 25 0            DEPTHs (>=0)
+ 26 2            SWAP (0=bin-exch,1=long,2=mix)
+ 27 64           swapping threshold
+ 28 0            L1 in (0=transposed,1=no-transposed) form
+ 29 0            U  in (0=transposed,1=no-transposed) form
+ 30 1            Equilibration (0=no,1=yes)
+ 31 8            memory alignment in double (> 0)
+
+save and run
+In your device how many processor give 
+# mpirun -np 16 ./xhpl
+
+
+For extra stubs =>
+===============
+
+https://www.intel.in/content/www/in/en/support/articles/000005755/processors.html
+	For Rpeak value check
+
+*********************************************
+	In case memory loss follow below links
+	
+https://www.advancedclustering.com/act_kb/tune-hpl-dat-file/
+
+# /opt/intel/oneapi/mkl/latest/examples
+	check in our system
+
+
+

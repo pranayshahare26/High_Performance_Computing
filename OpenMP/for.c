@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<omp.h>
-#define N 8
+#define N 999999
 int main()
 {
 	int a = 10; //shared

@@ -1,0 +1,56 @@
+Intel(R) VTune(TM) Amplifier summary
+Number of nodes;1
+
+/opt/intel/oneapi/vtune/2023.1.0/bin64/vtune -R summary -r /home/hpcap/hpcap/hpc_profiling_debugging/aps_result_20230704/hwmetrics/results.hpcap-DIT400TR-55L,s.* -q -format csv -csv-delimiter semicolon
+Hierarchy Level;Metric Name;Metric Value
+0;Elapsed Time;3.970404
+1;SP GFLOPS;0.015498
+1;DP GFLOPS;0.000214
+1;x87 GFLOPS;0.264075
+1;IPC;1.601879
+1;Average CPU Frequency;2450786569.756719
+1;Total Thread Count;
+1;CPU Time;20.528858
+0;Effective Physical Core Utilization;60.7% (4.858 out of 8)
+1;Effective Logical Core Utilization;32.3% (5.170 out of 16)
+0;Memory Bound;10.5
+1;Cache Bound;19.6
+1;DRAM Bound;0.6
+2;DRAM Bandwidth Bound;0.0
+1;NUMA: % of Remote Accesses;0.0
+1;Bandwidth Utilization;
+1;Bandwidth Domain;Platform Maximum;Observed Maximum;Average;% of Elapsed Time with High BW Utilization(%)
+1;DRAM, GB/sec;70.000000;19.375400;0.631285;0.0
+1;DRAM Single-Package, GB/sec;70.000000;19.375400;0.631285;0.0
+1;UPI Outgoing, GB/sec;[Unknown];0.0;0.0;100.0
+0;Vectorization;1.4
+1;Instruction Mix;
+2;SP FLOPs;0.0
+3;Packed;92.5
+4;128-bit;92.5
+4;256-bit;0.0
+4;512-bit;0.0
+3;Scalar;7.5
+2;DP FLOPs;0.0
+3;Packed;0.0
+4;128-bit;0.0
+4;256-bit;0.0
+4;512-bit;0.0
+3;Scalar;100.0
+2;x87 FLOPs;1.2
+2;Non-FP;98.7
+1;FP Arith/Mem Rd Instr. Ratio;0.066197
+1;FP Arith/Mem Wr Instr. Ratio;0.125573
+0;Collection and Platform Info;
+1;Application Command Line;./test_mpi.out 
+1;Operating System;5.19.0-45-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=22.04 DISTRIB_CODENAME=jammy DISTRIB_DESCRIPTION="Ubuntu 22.04.2 LTS"
+1;Computer Name;hpcap-DIT400TR-55L
+1;Result Size;3696845
+1;Collection start time;14:47:22 04/07/2023 UTC
+1;Collection stop time;14:47:26 04/07/2023 UTC
+1;Collector Type;Driverless Perf system-wide counting
+1;CPU;
+2;Name;Intel(R) Xeon(R) Processor code named Cascadelake
+2;Frequency;2095077953
+2;Logical CPU Count;16
+2;LLC size;11534336

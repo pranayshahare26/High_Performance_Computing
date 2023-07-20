@@ -1,0 +1,839 @@
+wget "https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.5.tar.gz"
+tar -zxvf
+tar -xvf openmpi-4.1.5.tar.gz 
+cd openmpi-4.1.5/
+vi ./configure
+./configure
+make
+make check
+echo $?
+make install
+make dist
+make distclean
+ls
+./configure --help || less
+echo $HOME
+./ configure --prefix = /home/hpcap/openMPI
+ls
+./configure --prefix=/home/hpcap/PROFILING/openmpi-4.1.5
+ls
+ls -la
+make disclean
+make distclean
+./configure --prefix=/home/hpcap/PROFILING/openmpi-4.1.5/installation
+echo $?
+make check
+find . 
+find . -name libmpi.a
+make check 
+make
+make check
+echo $?
+make install
+echo $?
+ls
+pwd
+cd
+cd PROFILING/
+wget "https://www.zlib.net/fossils/zlib-1.2.13.tar.gz"
+history
+tar -xvf zlib-1.2.13.tar.gz 
+history
+./configure --prefix=/home/hpcap/gcc/dependency/
+ls
+mddir /home/hpcap/gcc/deps
+mkdir /home/hpcap/gcc/deps
+mkdir /home/hpcap/gcc
+mkdir /home/hpcap/gcc/deps
+./configure --prefix=/home/hpcap/gcc/deps/zlib_1.2.13
+ls
+cd zlib-1.2.13/
+./configure --prefix=/home/hpcap/gcc/deps/
+ls
+pwd
+make -j 4
+make check -j 4
+make install
+echo $?
+cd
+cd PROFILING/
+ls
+cd
+cd /home/hpcap/gcc/deps/
+ls
+ls /bin
+ls -a
+ls ls bin
+cd
+cd PROFILING/
+history
+vi install.sh
+bash install.sh 
+history
+histpry
+history
+source /opt/intel/setvars.sh
+source /opt/intel/oneapi/setvars.sh 
+aps ./aps.out
+wget "https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.5-1.src.rpm"
+ls
+mv openmpi-4.1.5-1.src.rpm /PROFILING
+mv openmpi-4.1.5-1.src.rpm PROFILING
+cd PROFILING/
+ls
+tar -xvf openmpi-4.1.5
+tar -xvf openmpi-4.1.5.tar.gz 
+cd openmpi-4.1.5
+./configure --prefix=/home/hpcap/gcc/deps/
+
+make install j 8
+history 
+cd ..
+ls
+bash install.sh
+ls
+vi install.sh
+cd hdf5-1.14.1-2/
+ls
+make check
+history
+:q
+cd ..
+vi install
+cd hdf5-1.14.1-2/
+cd test/
+ls
+cd ../
+ls
+cd test
+ls
+cd ..
+ls
+vi testpar/
+cd testp
+cd testpar/
+ls
+make clean
+make
+make check
+df -Th
+cd PROF
+cd PROFILING/
+wget "https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/szip-2.1.1.tar.gz"
+tar -xvf szip-2.1.1.tar.gz 
+./configure --prefix=/home/hpcap/gcc/deps/
+cd
+./configure --prefix=/home/hpcap/gcc/deps/
+cd PROFILING/
+ls
+cd szip-2.1.1/
+./configure --prefix=/home/hpcap/gcc/deps/
+make
+make check
+make install
+echo $?
+wget "https://www.hdfgroup.org/downloads/hdf5/source-code/#"
+cd.
+cd..
+cd ..
+wget "https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_14_1/src/hdf5-1.14.1-2.tar.gz"
+tar -xvf hdf5-1.14.1-2.tar.gz 
+cd hdf5-1.14.1-2/
+./configure --prefix=/home/hpcap/gcc/deps/
+make -j 4
+cd ..
+wget "https://parallel-netcdf.github.io/Release/pnetcdf-1.12.3.tar.gz"
+tar -xvf pnetcdf-1.12.3.tar.gz 
+cd pnetcdf-1.12.3/
+./configure --prefix=/home/hpcap/gcc/deps/
+make
+make distclean
+make diskclean
+make distclean
+make disclean
+makt distclean
+make distclean
+./configure --prefix=/home/hpcap/gcc/deps/
+
+tar -xvf netcdf-c-4.9.2.tar.gz 
+cd netcdf-c-4.9.2/
+./configure --prefix=/home/hpcap/gcc/deps/
+make
+CD
+cd
+vi install.sh
+vi install.sh 
+bash install.sh 
+cd PROFILING/
+cd.
+cd..
+cd ..
+ls
+cd PROFILING/
+PWD
+pwd
+cd ..
+mv install.sh /home/hpcap/PROFILING
+ls
+cd PROFILING/
+ls
+bash install.sh
+vi install.sh 
+bash install.sh
+vi install.sh 
+bash install.sh
+vi install.sh 
+ls
+vi install.sh 
+bash install.sh
+vi install.sh 
+home
+cd
+pwd
+ls
+cd PROFILING/
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+echo $?
+vi install.sh
+bash install.sh
+which openmpi
+cd
+which openmpi
+vi install.sh
+ls
+cd PROFILING/
+ls
+vi install.sh
+shell install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+wq
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+echo $HOME
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+vi install.sh
+bash install.sh
+ls
+vi install.sh
+bash install.sh
+which mpicc
+vi install.sh
+ls home/hpcap/PROFILING/openmpi/
+vi install.sh
+ls /home/hpcap/PROFILING/openmpi/
+vi install.sh
+ls /home/hpcap/PROFILING/openmpi-4.1.5/
+vi install.sh
+pwd
+bash install.sh 
+ls
+history
+source machineL/bin/activate
+jupyter notebook
+pwd
+bash install1.sh
+ls
+bash install1.sh
+apt get install m4
+apt-get install m4
+sudo apt-get install m4
+bash install1.sh
+cd ..
+bash install1.sh
+cd TARS/
+bash install1.sh
+ls
+bash install1.sh
+bash install.sh 
+cd ..
+bash install.sh 
+rm -rf *
+bash install.sh 
+cd TARS/
+ls
+bash install.sh 
+cd ..
+bash install.sh 
+apt re,ove -Werror
+bash install.sh 
+echo $?
+ls
+vi install.sh 
+bash install.sh 
+sudo apt update
+sudo apt install upgrade
+sudo apt upgrade
+exit
+history
+./configure --prefix=/home/hpcap/MPI_Installtion
+echo $?
+make check
+make check -j 8
+echo $?
+make install
+echo $?
+pwd
+ls
+cd TARS/
+ls
+tar -xvf blas-3.11.0.tgz 
+echo $?
+ls
+cd BLAS-3.11.0/
+ls
+export MY_PREFIX=$HOME/home/hpcap/hpc/gcc
+make -j 20
+make check -j 20
+make check
+make install
+ls
+bash install.sh 
+sudo apt install m4
+sudo apt install xml2-config utility
+sudo apt install libxml2-dev
+sudo apt-get install libxml2-dev
+sudo apt-get install libxml2-dev --disable-libxml2
+bash install.sh 
+sudo apt-get install libcurl-ocaml-dev curl -y
+bash install.sh 
+sudo apt-get install libxml2-dev curl -y
+sudo apt-get install libxml2-dev 
+cd
+sudo apt-get install libxml2-dev
+sudo apt update
+sudo apt upgrade
+sudo apt-get install libxml2-dev
+sudo apt-get install libicu-dev
+sudo apt-get install libicu70=70.1-2
+sudo apt-get install libicu-dev
+sudo apt-get install libxml2-dev
+bash install.sh 
+ls
+cd PROFILING/
+ls
+bash install.sh 
+echo $?
+sudo apt-get install libicu70=70.1-2
+cp make.inc.example make.inc
+make blaslib
+echo $?
+make lapacklib
+echo $?
+history
+;d
+ls
+cd PROFILING/
+ls
+cd TARS/
+ls
+cd lapack-3.11.0/
+ls
+cat make.inc.example 
+ls
+cd ../..
+cd
+ls
+cd home/
+ls
+cd hpcap/
+ls
+cd hpc/
+ls
+cd gcc/
+ls
+cd lib
+ls
+ls -l $HOME/home/hpcap/hpc/gcc/lib/
+cd 
+ls
+cd home/
+ls
+cd ..
+cd PROFILING/
+ls
+cd TARS/
+ls
+tar -xvf fftw-3.3.10.tar.gz 
+lls
+ls
+cd fftw-3.3.10/
+ls
+cat README
+cd
+cd home/
+ls
+cd hpcap/
+ls
+cd hpc/gcc/
+ls
+cd bin/
+ls
+cd ..
+cd lib/
+ls
+cd
+ls
+cd PROFILING/
+ls
+cd TARS/
+ls
+export MPI_HOME=/home/hpcap/MPI_Installtion
+which mpi
+which mpicc
+export MPI_HOME=/home/hpcap/MPI_Installtion
+export PATH=${MPI_HOME}/bin:${MY_PREIFX}/bin:$PATH
+export LD_LIBRARY_PATH=${MPI_HOME}/lib:${MY_PREFIX}/lib:$LD_LIBRARY_PATH
+export CPATH=${MPI_HOME}/include:${MY_PREFIX}/include:$CPATH
+which mpicc
+ls
+which mpicc
+ls
+history
+touch 2.txt
+cd /home/hpcap/home/hpcap/home/hpcap/hpc/gcc
+cd /home/hpcap/home/hpcap/hpc/gcc
+cd lib/
+ls
+pwd
+ls
+ls -a
+ls -l
+ls
+ls -l
+history
+pwd
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+ls
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+ls -l
+history
+ls
+bash env.sh 
+csh
+source env.sh
+./compile
+./configure
+ls
+cd TARS/
+history
+ls
+tar -xvf blas-3.11.0.tgz 
+ls
+cd BLAS-3.11.0/
+ls
+vi make.inc 
+vi Makefile 
+vi make.inc 
+vi Makefile 
+vi make.inc 
+sed -i -e "s|^FC . *|FC = ${FC}|" make.inc 
+vi make.inc 
+sed -i -e "s|^FLAGS . *|& =-fPIC|" make.inc 
+vi make.inc 
+sed -i -e "s|^FLAGS . *|& -fPIC|" make.inc 
+vi make.inc 
+sed -i -e "s|^FFLAGS . *|& -fPIC|" make.inc 
+vi make.inc 
+sed -i -e "s|^FC .*|FC = ${FC}|" make.inc 
+sed -i -e "s|^FFLAGS . *|& -fPIC|" make.inc 
+vi make.inc 
+cd ..
+ls
+rm -rf BLAS-3.11.0/
+tar -xvf blas-3.11.0.tgz 
+cd BLAS-3.11.0/
+ls
+vi make.inc 
+sed -i -e "s|^FC .*|FC = ${FC}|" make.inc 
+sed -i -e "s|^FFLAGS . *|& -fPIC|" make.inc 
+make
+vi make.inc 
+make cleanobj
+ls
+make
+cd ..
+ls
+rm -rf BLAS-3.11.0/
+tar -xvf blas-3.11.0.tgz 
+cd BLAS-3.11.0/
+ls
+make
+cp ./blas_LINUX.a $HOME/hpcap/hpc/gcc/deps/lib/libblas.a
+cp ./blas_LINUX.a $HOME/hpc/gcc/deps/lib/libblas.a
+cp ./blas_LINUX.a $HOME/home/hpcap/home/hpcap/hpc/gcclib/libblas.a
+cp ./blas_LINUX.a $HOME/home/hpcap/hpc/gcclib/libblas.a
+cp ./blas_LINUX.a $HOME /home/hpcap/hpc/gcclib/libblas.a
+cp ./blas_LINUX.a $HOME/home/hpcap/home/hpcap/hpc/gcc/lib/libblas.a
+cp ./blas_LINUX.a $HOME /home/hpcap/hpc/gcc/lib/libblas.a
+cp ./blas_LINUX.a $HOME/home/hpcap/hpc/gcc/lib/libblas.a
+ls -l $HOME/home/hpcap/hpc/gcc/lib/libblas*
+cd ..
+wget "https://www.netlib.org/lapack/#_lapack_version_3_11_0_2"
+ls
+rm index.html 
+ls
+tar -xvf lapack-3.11.0.tar.gz 
+cd lapack-3.11.0/
+ls
+cat README.md 
+make
+ls
+cat make.inc.example 
+cat README.md 
+ls
+cd INSTALL/
+ls
+make
+cd ..
+ls
+cd LAPACKE/
+ls
+cat CMakeLists.txt 
+ls
+cat Makefile 
+cd ..
+ls
+cd lapack-3.11.0/
+ls
+cat README.md 
+ls
+cp make.inc.example  make.inc
+ls
+make
+ls
+make cblaslib
+ls
+hisory
+history
+cp *.a $HOME/home/hpcap/hpc/gcc/lib/
+cd ..
+ls
+cd fftw-3.3.10/
+history
+./configure --prefix=$HOME/home/hpcap/hpc/gcc
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-maintainer-mode
+make check -j 20
+echo $?
+make install
+make clean
+ls
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-single --enable-float --enable-long-double --enable-quad-precision --enable-mpi --enable-openmp 
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-single --enable-float
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-long-double --enable-quad-precision --enable-mpi --enable-openmp 
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-long-double
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-quad-precision --enable-mpi --enable-openmp 
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-quad-precision
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-mpi --enable-openmp 
+ls
+make -j 20
+make check -j 20
+echo $?
+make install
+vi config.log
+ls
+make clean
+hisory
+history
+ls
+./configure --prefix=$HOME/home/hpcap/hpc/gcc --enable-single --enable-float --enable-mpi --enable-openmp 
+make clean
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-long-double --enable-quad-precision --enable-mpi --enable-openmp 
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-
+make clean
+export CC=mpicc
+export MPICC=mpicc
+export F77=mpifort
+ls
+which mpicc
+export MPI_HOME=/home/hpcap/MPI_Installtion
+export PATH=${MPI_HOME}/bin:${MY_PREIFX}/bin:$PATH
+export LD_LIBRARY_PATH=${MPI_HOME}/lib:${MY_PREFIX}/lib:$LD_LIBRARY_PATH
+export CPATH=${MPI_HOME}/include:${MY_PREFIX}/include:$CPATH
+which mpicc
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-single  --enable-mpi --enable-openmp 
+make -j 20
+make install
+ls
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc
+ls -l $HOME/hpcap/home/hpcap/hpc/gcc
+ls -l $HOME/hpcap/home/hpcap/hpc/gcc/
+ls -l $HOME hpcap/home/hpcap/hpc/gcc/
+ls -l $HOME /hpcap/home/hpcap/hpc/gcc/
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+
+make clean
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-long-double  --enable-mpi --enable-openmp 
+make -j 20
+make install
+make clean
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-quad-precision 
+make -j 20
+make install
+make clean
+./configure --prefix=$HOME/home/hpcap/hpc/gcc  --enable-long-double 
+history
+cd ..
+git clone https://github.com/wrf-model/WPS
+history
+ls -lrth ~/home/hpcap/home/hpcap/hpc/gcc/lib
+ls ~larth ~/home/hpcap/home/hpcap/hpc/gcc/lib
+ls -larth ~/home/hpcap/home/hpcap/hpc/gcc/lib
+ls -larth -/home/hpcap/home/hpcap/hpc/gcc/lib
+ls -larth -/home/hpcap/home/hpcap/hpc/gcc/lib/*.a
+history
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib/*,a
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib/*.a
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+cd fftw-3.3.10/
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+cd
+cd PROFILING/TARS/
+ls
+cd WPS/
+ls
+cat README 
+cd ..
+rmdir WPS/
+rm -rf WPS/
+ls
+git clone --recurse-submodules https://github.com/wrf-model/WRF
+ls
+cd WRF/
+ls
+cat README.md 
+cat README
+history
+ls -l $HOME/home/hpcap/home/hpcap/hpc/gcc/lib
+ls -l $HOME/home/hpcap/hpc/gcc/lib
+ls -l $HOME/home/hpcap/hpc/gcc/lib/*.a
+ls
+cd test/
+ls
+cd ..
+ls
+cat README
+ls
+export MPI_HOME=/home/hpcap/MPI_Installtion
+export PATH=${MPI_HOME}/bin:${MY_PREIFX}/bin:$PATH
+export LD_LIBRARY_PATH=${MPI_HOME}/lib:${MY_PREFIX}/lib:$LD_LIBRARY_PATH
+export CPATH=${MPI_HOME}/include:${MY_PREFIX}/include:$CPATH
+which mpicc
+ls -/home/hpcap/home/hpcap/hpc/gcc
+ls ~/home/hpcap/home/hpcap/hpc/gcc
+ls
+export NETCDF=$HOME/home/hpcap/home/hpcap/hpc/gcc
+echo $NETCDF
+export NETCDF=$HOME/home/hpcap/hpc/gcc
+echo $NETCDF
+which NF-config
+which nf-config
+export PATH=$NETCDF/bin:$PATH
+export LD_LIBRARY_PATH=$NETCDF/include:$CPATH
+export LD_LIBRARY_PATH=$NETCDF/lib:$LD_LIBRARY_PATH
+export CPATH=$NETCDF/include:$CPATH
+which nf-config
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+history
+nf-config --all
+./configure
+ls
+cat compile 
+bash compile 
+cat README
+compile em_real
+
+compile em_realls
+ls
+./compile em_real
+
+csh
+sudo apt install csh
+csh
+vi emv.sh
+source env.sh
+ls
+source emv.sh
+which nf-config
+mv emv.sh env.sh
+which mpicc
+cp env.sh env.csh
+ls
+vi emv.csh
+vi emv.sh
+vi env.sh
+vi emv.csh
+ls
+rm emv.sh emv.csh
+ls
+rm emv.csh
+rm env.csh
+vi env.csh
+ls
+cd..
+cd ..
+ls
+cd ..
+ls
+source env.sh 
+history
+python -u "/home/hpcap/PROFILING/v4.4_bench_conus12km/diffwrf.py"
+history
+pwd
+top
+pwd
+cat README 
+ls
+cd ..
+ls
+cd v4.4_bench_conus12km/
+ls
+cp namelist.input wrfbdy_d01 wrfinput_d01 *.dat /home/hpcap/PROFILING/TARS/WRF
+cp namelist.input wrfbdy_d01 wrfinput_d01 *.dat /home/hpcap/PROFILING/TARS/WRF/test/em_real
+history
+history
+jupyter notebook
+pwd
+pwd
+history
+source machineL/bin/activate
+jupyter notebook
+sudo apt-get install cmake
+rm -rf build/
+ls
+gcc -c -O -I${HOME}/lammps/src -caller.c
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/ -test2.c 
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/ - test2.c 
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/  test2.c 
+ls
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/  test2.c  && ./b.out
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/  test2.c  && ./out
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/ test  test2.c  && 
+gcc -c -O -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/ test  test2.c  && ./b.out
+mpirun -np 8 -I${HOME}/PROFILING/TARS/lammps-stable/lammps-23Jun2022/src/lmp_mpi -in matric.c 
+mkdir build
+cd build/
+cmake ../cmake
+make serial
+make serial -j 20
+make mpi -j 20
+make -j 20
+cmake -D CMAKE_INSTALL_PREFIX=$HOME/home/hpcap/hpc/gcc ../cmake
+cmake -D CMAKE_INSTALL_PREFIX=$HOME/home/hpcap/hpc/gcc
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/home/hpcap/hpc/gcc
+echo ${PWD}/
+mkdir build
+cd build/
+cmake ../cmake
+cmake --build .
+mkdir build
+cd ..
+cd ../../
+cd TARS//lammps-stable/
+ls
+cd lammps-23Jun2022/
+mkdir build
+cd build/
+cmake ../cmake
+cmake --build .
+which mpicc
+export MPI_HOME=/home/hpcap/MPI_Installtion
+which mpicc
+export MPI_HOME=/home/hpcap/MPI_Installtion
+export PATH=${MPI_HOME}/bin:${MY_PREIFX}/bin:$PATH
+
+export CPATH=${MPI_HOME}/include:${MY_PREFIX}/include:$CPATH
+which mpicc
+-DBUILD_MPI=yes
+ls
+which mpicc
+make -DBUILD_MPI=yes
+nano install.sh
+ls
+bash install.sh 
+echo $?
+hdfs dfs -ls/
+hdfs dfs -ls /
+pwd
+source machineL/bin/activate
+cd ..
+source machineL/bin/activate
+jupyter notebook
+jupyter notebook
+sudo apt-get update
+sudo apt-get install virtualbox
+sudo apt-get install virtualbox-ext-pack
+virtualbox
+top
+source env.sh
+./compile
+./compile em_real
+csh
+ls
+pwd
+ls
+cd test/
+ls
+cd em_real/
+ls
+source env.sh
+cd ..
+source env.sh 
+cd test/em_real/
+ls wrfbdy_d01 wrfinput_d01 *.dat namelist.input
+mpirun -np 8 ./wrf.exe
+ls
+history
+source /opt/intel/oneapi/setvars.sh 
+cd ..
+ls
+cd ..
+ls
+source env.sh 
+source /opt/intel/oneapi/setvars.sh 
+mpirun -np 4 aps ./wrf.exe
+ls
+cd test/
+ls
+cd em_real/
+ls
+mpirun -np 4 aps ./wrf.exe
+aps ./wrf.exe
+ls
+mpirun -np 10 aps ./wrf.exe
+source /opt/intel/oneapi/setvars.sh 
+mpirun -np 8 aps ./wrf.exe
+aps --report /home/hpcap/PROFILING/TARS/WRF/test/em_real/aps_result_2023071
+aps --report /home/hpcap/PROFILING/TARS/WRF/test/em_real/aps_result_20230710
+source machineL/bin/activate
+jupyter notebook
+cat > command.txt
+

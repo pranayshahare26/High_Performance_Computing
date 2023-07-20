@@ -3,10 +3,10 @@ High Performance Computing
 
 For login to cluster(Param SHAVAK)
 
-# ssh user14@192.168.82.160
+# ssh user14@192.168.82.12
 	press enter
 	then put the captcha
-	then enter password :- user14@@123
+	then enter password :- Pranay@31
 
 # sinfo 
 	To check about of the cluster
