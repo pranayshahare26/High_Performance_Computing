@@ -1,0 +1,215 @@
+==========
+= LAMMPS =
+==========
+
+# pkill lmp_mpi
+	For kiling the forcefully stop processes
+
+Moleculer dynamic
+
+
+VTUNE
+=====
+
+source /opt/intel/oneapi/setvars.sh
+which vtune
+
+https://www.intel.com/content/www/us/en/developer/articles/training/vtune-profiler-tutorials.html
+
+
+
+HOTSPOTS
+========
+
+mpirun -np 8 aps ./lmp_mpi -in ./in.lj 
+
+For using normal hotspots
+mpirun -np 8 vtune -collect hotspots -r ./ ./lmp_mpi -in ./in.lj 
+
+Using Hotspots GUI
+# mpirun -np 8 vtune -collect hotspots -r ./res ./lmp_mpi -in ./in.lj
+
+cd res_file
+
+# vtune-gui res.hpcap-DIT400TR-55L.vtune
+
+For vectorization
+
+O3 -xcore-aux256 
+    or aux512
+    
+    
+    
+Memory Consuption
+=================
+
+for run
+
+#  mpirun -np 8 vtune -collect memory-consumption -r ./res1 ./lmp_mpi -in ./in.lj
+
+# cd res1
+
+# vtune-gui res1.hpcap-DIT400TR-55L.vtune 
+
+
+HPC Performance
+===============
+
+For run and gui analysis
+
+# mpirun -np 8 vtune -collect hpc-performance -r ./res1 ./lmp_mpi -in ./in.lj 
+
+# cd hpc-performance
+
+# vtune-gui res2.hpcap-DIT400TR-55L.vtune 
+
+
+Trace Analyzer
+==============
+
+# mpirun -trace -np 8 ./lmp_mpi -in ./in.lj
+
+# ls
+	For check .stf file
+	
+# traceanalyzer lmp_mpi lmp_mpi.stf
+
+
+Advisor
+=======
+
+# mpirun -np 8 advisor --collect=survey ./lmp_mpi -in ./in.lj 
+	
+# advisor-gui Tools.advixeproj
+
+# mpirun -np 8 advisor --collect=roofline ./lmp_mpi -in ./in.lj 
+
+
+Inspector
+=========
+
+# export OMP_NUM_THREADS=(No. Threads)
+
+# mpirun -np 8 inspxe-cl -collect=ti2 -r ./Inspector ./lmp_mpi -in ./in.lj
+
+# inspxe-gui Inspector.file
+
+
+
+===============
+= HPC Toolkit =
+===============
+
+# du -sh spack
+	For show dir size usage
+
+Download
+
+http://hpctoolkit.org/software-instructions.html#Clone-Spack-and-HPCToolkit
+
+Now clone the repos
+
+git clone https://github.com/spack/spack.git
+git clone https://gitlab.com/hpctoolkit/hpctoolkit.git
+
+Goto
+
+# spack dir
+
+# source share/spack/setup-env.sh
+
+# spack external find
+
+# spack compiler list
+
+# spack spec hpctoolkit
+
+# spack install hpctoolkit %gcc@11.3.0
+
+# spack load hpctoolkit@2023.03.01
+
+# mpirun -np 8 hpcrun ./lmp_mpi -in ./in.lj
+
+# mpirun -np 8 hpcprof-mpi ./lmp_mpi -in ./in.lj
+
+# hpcprof hpctoolkit-lmp_mpi-measurements/
+
+# hpcstruct hpctoolkit-lmp_mpi-measurements/
+
+# hpcviewer hpctoolkit-lmp_mpi-database/
+
+
+
+=======
+= TAU =
+=======
+
+# spack spec tau
+
+# spack install tau+mpi %gcc@11.3.0
+
+# which tau_cc.sh 
+
+
+Create New Lammps
+
+# tar -xvf lammps-stable.tar.gz
+
+# mkdir build
+
+# cd build/
+
+# bash install.sh
+=>
+
+#!/bin/bash
+
+source /opt/intel/oneapi/setvars.sh 
+
+which tau_cxx.sh
+sleep 1
+
+cmake ../cmake/ \
+	-DBUILD_MPI=yes \
+	-DBUILD_OMP=yes \
+	-DLAMMPS_MACHINE=mpi \
+	-DCMAKE_CXX_COMPILER="tau_cxx.sh" \
+	-DCMAKE_C_COMPILER="tau_cc.sh" \
+	-DCMAKE_Fortran_COMPILER="tau_f90.sh" \
+	-DCMAKE_CXX_FLAGS="-std=c++11" \
+	-DCMAKE_C_FLAGS="-std=c++11" \
+	-DCMAKE_Fortran_FLAGS="-std=c++11" \
+	-DBUILD_SHARED_LIBS=yes 
+	
+	
+make -j 20 |& tee log.make
+
+
+# which tau_compiler.sh
+
+# tau_cxx.sh -optCompInst -Ofast mpi_send_recv_tau.c
+	For compile
+	
+# export TAU_TRACE=1
+
+# export TAU_CALLPATH=1
+
+# mpirun -np 2 ./a.out
+
+# tau_treemerge.pl
+
+# tau2slog2 tau.trc tau.edf -o tau.slog2
+
+# jumpshot tau.slog2
+
+# unset TAU_TRACE
+
+# unset TAU_CALLPATH
+
+# tau_cxx.sh -optCompInst -Ofast mpi_send_recv_tau.c
+
+# mpirun -np 2 ./a.out
+
+# pprof profile.*
+
+# paraprof profile.*

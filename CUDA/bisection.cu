@@ -13,34 +13,34 @@ __global__ void arradd(int* md, int* nd, int* pd)
 
 int test_result(int *m, int *n, int *p, int *md, int *nd, int *pd, int num_threads)
 {
-        int size = num_threads*sizeof(int);
-        int i, flag;
-        flag = 0;
-	    cudaMalloc(&md, size);
-	    cudaMemcpy(md, m, size, cudaMemcpyHostToDevice);
+	int size = num_threads*sizeof(int);
+	int i, flag;
+	flag = 0;
+	cudaMalloc(&md, size);
+	cudaMemcpy(md, m, size, cudaMemcpyHostToDevice);
 
-	    cudaMalloc(&nd, size);
-	    cudaMemcpy(nd, n, size, cudaMemcpyHostToDevice);
+	cudaMalloc(&nd, size);
+	cudaMemcpy(nd, n, size, cudaMemcpyHostToDevice);
 
-	    cudaMalloc(&pd, size);
+	cudaMalloc(&pd, size);
 
-	    dim3   DimGrid(1, 1);     
-	    dim3   DimBlock(num_threads, 1);   
+	dim3   DimGrid(1, 1);     
+	dim3   DimBlock(num_threads, 1);   
 
 
-	    arradd<<< DimGrid,DimBlock >>>(md,nd,pd);
+	arradd<<< DimGrid,DimBlock >>>(md,nd,pd);
 
-	    cudaMemcpy(p, pd, size, cudaMemcpyDeviceToHost);
-	    
-	    for(i=0;i<num_threads;i++)
-	    {
-	        if(p[i] != 2*i)
-	        {
-	            flag = 1;
-	            break;
-	        }
-	    }
-	    return flag;
+	cudaMemcpy(p, pd, size, cudaMemcpyDeviceToHost);
+	
+	for(i=0;i<num_threads;i++)
+	{
+		if(p[i] != 2*i)
+		{
+			flag = 1;
+			break;
+		}
+	}
+	return flag;
 }
 
 int main()

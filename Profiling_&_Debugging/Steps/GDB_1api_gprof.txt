@@ -19,9 +19,11 @@ b FUNCTION_NAME [thread N] [if COND]
 * GProf *
 *********
 	Command									Meaning
-gcc -pg -o my-program my-program.c				Compile with instrumentation for gprof
-./my-program							Run the program, writes gmon.out.
-gprof ./my-pogram gmon.out [FURTHER OPTIONS]			Examine profiler output
+# gcc -pg -o my-program my-program.c				Compile with instrumentation for gprof
+
+# ./my-program							Run the program, writes gmon.out.
+
+# gprof ./my-pogram gmon.out [FURTHER OPTIONS]			Examine profiler output
 
 
 

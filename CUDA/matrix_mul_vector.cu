@@ -20,7 +20,7 @@
         }
     }
 }
- int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     int *A, *B, *C;
     int *d_A, *d_B, *d_C;
@@ -78,7 +78,7 @@
 
      // Copy the result from device to host
     cudaMemcpy(C, d_C, VECTORSIZE * VECTORSIZE * sizeof(int), cudaMemcpyDeviceToHost);
-     exe_time = (stop_time.tv_sec + (stop_time.tv_usec / 1000000.0)) - (start_time.tv_sec + (start_time.tv_usec / 1000000.0));
+    exe_time = (stop_time.tv_sec + (stop_time.tv_usec / 1000000.0)) - (start_time.tv_sec + (start_time.tv_usec / 1000000.0));
 
      //print the data
   /*  printf("\n C matrix:\n");
@@ -91,7 +91,7 @@
         printf("\n");
     }*/
     printf("\n Execution time is = %lf seconds\n", exe_time);
-     printf("\nProgram exit!\n");
+    printf("\nProgram exit!\n");
 
      //Free arrays
     free(A);
@@ -102,5 +102,5 @@
     cudaFree(d_A);
     cudaFree(d_B);
     cudaFree(d_C);
-     return 0;
+    return 0;
 }
