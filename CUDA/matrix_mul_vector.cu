@@ -3,7 +3,7 @@
 #include <sys/time.h>
 #define VECTORSIZE 10000
 
- __global__ void matrix_multiply(int *A, int *B, int *C, int size)
+__global__ void matrix_multiply(int *A, int *B, int *C, int size)
 {
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     int j, k, sum;
@@ -90,7 +90,7 @@ int main(int argc, char **argv)
         }
         printf("\n");
     }*/
-    printf("\n Execution time is = %lf seconds\n", exe_time);
+    printf("\nExecution time is = %lf seconds\n", exe_time);
     printf("\nProgram exit!\n");
 
      //Free arrays
@@ -104,3 +104,22 @@ int main(int argc, char **argv)
     cudaFree(d_C);
     return 0;
 }
+
+/*
+
+This program performs matrix multiplication on a GPU using CUDA. It multiplies two matrices A and B of size 10,000 x 10,000 and stores the result in matrix C. The program also measures the execution time of the matrix multiplication operation.
+Here's a step-by-step explanation of the code:
+1. It includes necessary libraries and defines the size of the vectors to be used.
+2. The  `matrix_multiply`  function is a CUDA kernel that performs the matrix multiplication. It calculates the index  `i`  for each thread and then checks if  `i`  is less than  `size`  (the size of the matrix). If it is, it performs the multiplication and sum operations for the elements of the matrices A and B, and stores the result in matrix C.
+3. In the  `main`  function, it first allocates memory for the matrices A, B, and C on the host (CPU) using  `malloc` .
+4. It initializes the elements of matrices A and B to 1 and 2 respectively, and the elements of matrix C to 0.
+5. It allocates memory for matrices A, B, and C on the device (GPU) using  `cudaMalloc` .
+6. It copies the data from the host to the device using  `cudaMemcpy` .
+7. It calculates the number of blocks needed for the GPU execution and records the start time.
+8. It launches the  `matrix_multiply`  kernel on the GPU.
+9. It records the stop time after the kernel execution.
+10. It copies the result (matrix C) from the device to the host using  `cudaMemcpy` .
+11. It calculates the execution time and prints it out.
+12. Finally, it frees the memory allocated for the matrices on the host and the device using  `free`  and  `cudaFree`  respectively.
+
+*/

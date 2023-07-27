@@ -113,7 +113,7 @@ int main(int argc, char **argv)
 	
 	printf("\nC[5*VECTORSIZE+5] = %d ", C[5*VECTORSIZE+5]);	
 	
-	printf("\n Execution time is = %lf seconds\n", exe_time);
+	printf("\nExecution time is = %lf seconds\n", exe_time);
 	
 	printf("\nProgram exit!\n");
 	
@@ -125,3 +125,30 @@ int main(int argc, char **argv)
 	cudaFree(Bd);
 	cudaFree(Cd);
 }
+
+/*
+
+The code is performing matrix multiplication using CUDA parallel programming. It defines the size of the vectors and the number of threads to be used. It then defines a kernel function  `matmul`  which performs the matrix multiplication for a given block and thread. The main function initializes the arrays A, B, and C, and then allocates memory on the GPU for A, B, and C. It copies the data from the host to the device, calls the  `matmul`  kernel function, and then copies the result back to the host. Finally, it calculates the execution time and prints the result.
+Step-wise explanation of the code:
+1. Include necessary header files:  `stdio.h` ,  `stdlib.h` ,  `sys/time.h` .
+2. Define the size of the vectors ( `VECTORSIZE` ) and the number of threads ( `NUM_THDS` ).
+3. Define the kernel function  `matmul`  which performs matrix multiplication for a given block and thread.
+4. Define the main function.
+5. Declare variables:  `i` ,  `j` ,  `A` ,  `B` ,  `C` ,  `Ad` ,  `Bd` ,  `Cd` ,  `exe_time` ,  `stop_time` ,  `start_time` .
+6. Allocate memory for arrays A, B, and C using  `malloc` .
+7. Initialize the data in arrays A, B, and C.
+8. Get the start time using  `gettimeofday` .
+9. Calculate the total number of threads, number of threads per block, and number of blocks.
+10. Allocate memory on the GPU for A, B, and C using  `cudaMalloc` .
+11. Copy data from host to device using  `cudaMemcpy` .
+12. Call the  `matmul`  kernel function with the specified number of blocks and threads.
+13. Copy the result from the device to the host using  `cudaMemcpy` .
+14. Get the stop time using  `gettimeofday` .
+15. Calculate the execution time.
+16. Print the result of C[5*VECTORSIZE+5].
+17. Print the execution time.
+18. Free the allocated memory for A, B, and C using  `free` .
+19. Free the allocated memory on the GPU using  `cudaFree` .
+20. End the program.
+
+*/

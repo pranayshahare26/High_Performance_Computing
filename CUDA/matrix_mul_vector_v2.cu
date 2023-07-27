@@ -21,7 +21,7 @@ __global__ void matrix_vec_mul(int *A, int *B, int *C)
 		}
 		sum_arr[threadIdx.x] = sum;
 		__syncthreads();
-		
+
 		while(range>0)
         {
             if(threadIdx.x < range)
@@ -38,11 +38,8 @@ __global__ void matrix_vec_mul(int *A, int *B, int *C)
 	    }
 	}
 }
-
-
 int main(int argc, char **argv)
 {
-	//int myid, size;
 	int i, j;
 	int *A, *B, *C, *Ad, *Bd, *Cd; 	
 	double exe_time;
@@ -98,7 +95,6 @@ int main(int argc, char **argv)
 	cudaMemcpy(Ad,A,VECTORSIZE*VECTORSIZE*sizeof(int),cudaMemcpyHostToDevice);
 	cudaMemcpy(Bd,B,VECTORSIZE*sizeof(int),cudaMemcpyHostToDevice);
 	
-	int Total_num_Threads = VECTORSIZE;
 	int num_threads_per_block = NUM_THDS_PER_BLK;
 	int numblocks = VECTORSIZE;
 	
@@ -115,10 +111,8 @@ int main(int argc, char **argv)
 	{
 		printf("\t%d", C[i]);	
 	}*/
-	printf("\n Execution time is = %lf seconds\n", exe_time);
-	
+	printf("\nExecution time is = %lf seconds\n", exe_time);
 	printf("\nProgram exit!\n");
-	
 	
 	cudaFree(Ad);
 	cudaFree(Bd);
@@ -129,3 +123,25 @@ int main(int argc, char **argv)
 	free(B);
 	free(C);
 }
+
+/*
+
+The code is a CUDA program that performs matrix-vector multiplication. 
+It multiplies a matrix A of size VECTORSIZE x VECTORSIZE with a vector B of size VECTORSIZE to produce a vector C of size VECTORSIZE.
+The main function starts by allocating and initializing the arrays A, B, and C.
+A is initialized as a matrix of all 1s, and B is initialized as a vector of all 1s.
+Then, the code measures the execution time using gettimeofday function.
+Next, it allocates memory on the GPU for the arrays Ad, Bd, and Cd using cudaMalloc function.
+It then copies the data from the CPU arrays A and B to the GPU arrays Ad and Bd using cudaMemcpy function.
+The code defines the number of total threads as VECTORSIZE and the number of threads per block as NUM_THDS_PER_BLK.
+It calculates the number of blocks needed as VECTORSIZE.
+Then, it calls the kernel function matrix_vec_mul with the specified number of blocks and threads per block.
+The kernel function performs the matrix-vector multiplication using parallel threads on the GPU.
+Each thread calculates a partial sum and stores it in the shared array sum_arr.
+The shared array is then reduced using a binary tree reduction algorithm until only one thread remains. 
+The result is then stored in the output array C.
+After the kernel execution, the result is copied back from the GPU array Cd to the CPU array C using cudaMemcpy function.
+Finally, the code measures the execution time again and prints it along with a message indicating the program exit.
+It also frees the allocated memory on the GPU using cudaFree function, and frees the arrays A, B, and C on the CPU using free function.
+
+*/

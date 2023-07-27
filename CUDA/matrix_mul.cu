@@ -19,11 +19,9 @@ __global__ void matrix_vec_mul(int *A, int *B, int *C)
 	}
 }
 
-
 int main(int argc, char **argv)
 {
-	int myid, size;
-	int i, j, sum;
+	int i, j;
 	int *A, *B, *C, *Ad, *Bd, *Cd; 	
 	double exe_time;
 	struct timeval stop_time, start_time;
@@ -95,10 +93,8 @@ int main(int argc, char **argv)
 	{
 		printf("\t%d", C[i]);	
 	}*/
-	printf("\n Execution time is = %lf seconds\n", exe_time);
-	
+	printf("\nExecution time is = %lf seconds\n", exe_time);	
 	printf("\nProgram exit!\n");
-	
 	
 	cudaFree(Ad);
 	cudaFree(Bd);
@@ -109,3 +105,23 @@ int main(int argc, char **argv)
 	free(B);
 	free(C);
 }
+
+/*
+
+The code is performing matrix-vector multiplication using CUDA. 
+ 1. The code defines the size of the vectors as VECTORSIZE.
+2. The code then defines a CUDA kernel function called matrix_vec_mul, which takes three integer pointers as input: A, B, and C.
+3. Inside the kernel function, it calculates the index i based on the block and thread indices, and initializes the sum variable.
+4. It checks if i is less than VECTORSIZE, and if so, it enters a loop to calculate the sum by multiplying each element of row i in matrix A with the corresponding element in vector B, and adding it to the sum.
+5. Finally, it stores the sum in the corresponding index of vector C.
+6. The main function starts by declaring variables and allocating memory for arrays A, B, and C.
+7. It then initializes the data in arrays A and B with the value 1.
+8. It allocates memory on the GPU for arrays Ad, Bd, and Cd, and copies the data from arrays A and B on the host to the corresponding arrays on the GPU.
+9. It calculates the number of blocks and threads per block needed to process the data, and calls the matrix_vec_mul kernel function with the specified number of blocks and threads per block.
+10. It then copies the result from array Cd on the GPU back to array C on the host.
+11. It calculates the execution time by measuring the start and stop time using the gettimeofday function.
+12. It prints the execution time.
+13. It frees the memory on the GPU.
+14. It frees the memory for arrays A, B, and C on the host.
+
+*/
