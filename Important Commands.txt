@@ -111,5 +111,5 @@ For login to cluster(Param SHAVAK)
 * SYCL *
 ********
 
-# icpx -fsycl a.cpp ./a.out
+# icpx -fsycl a.cpp && ./a.out
 	Compile and execute the program
