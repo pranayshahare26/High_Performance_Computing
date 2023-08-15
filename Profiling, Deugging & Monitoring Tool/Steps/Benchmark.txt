@@ -18,7 +18,7 @@ load the spack
 
 # spack load likwid
 
-# likwid -iopology
+# likwid -topology
 
 # likwid-perfctr -C 2 -g CLOCK ./a.out
 
